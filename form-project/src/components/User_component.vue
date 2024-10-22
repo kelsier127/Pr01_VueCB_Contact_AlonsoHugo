@@ -1,5 +1,6 @@
 <script setup>
   import { ref } from 'vue';
+  
   let nomUsuario = ref("");
   let numUsuario = ref("");
 
@@ -11,8 +12,9 @@
   }
 
   function enviar(){
-    user.nom = nomUsuario
-    user.num = numUsuario
+    user.nom = nomUsuario.value
+    user.num = numUsuario.value
+    
     emit('enviar',user)
   }
 
